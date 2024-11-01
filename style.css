@@ -1,0 +1,533 @@
+/* スマホサイズ */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color:#3e3e3e;
+  font-family: "Noto Sans JP", "Noto Sans";
+}
+
+.container {
+  margin: 0 auto;
+  background-color: #489e9c;
+}
+
+a {
+  color:#3e3e3e;
+  text-decoration: none;
+}
+
+ul, 
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.title {
+  color: #fcfe7e;
+  font-size: 3.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 0 5px 0;
+}
+
+.sub-title {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#sec-4,
+#sec-6,
+#sec-8 {
+  padding-top: 70px;
+  margin-top:-70px;
+}
+
+.top-btn {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0 30px 20px 30px;
+  background: #489e9c;
+}
+
+.btn-item {
+  width: 100%;
+  transition: ease .3s;
+}
+
+.btn-link {
+  display: block;
+  padding: 20px 0px;
+  border-radius: 20px;
+  background: #e74747;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 450;
+  letter-spacing: 2.5px;
+  transition: ease .3s;
+  position: relative;
+}
+.btn-link::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: solid 3px #fff;
+  border-right: solid 3px #fff;
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(45deg);
+  transition: ease .3s;
+}
+
+.btn-link:hover {
+  background: #fff;
+  border: solid 3px #e74747;
+  color: #e74747;
+  transition: ease .3s;
+}
+
+.btn-link:hover::after {
+  border-top: solid 3px#e74747;
+  border-right: solid 3px#e74747;
+  transition: ease .3s;
+}
+
+.common-contact {
+  width: 100%;
+  height: auto;
+  padding: 20px 30px;
+  background: #fffcd3;
+}
+
+/* ヘッドエリア*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 0 25px;
+}
+
+.header-inner img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* ナビメニュー */
+.nav-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 80px 0 0 30px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background: #fff;
+  cursor: pointer;
+  transform: translateX(100%);
+  transition: ease .3s;
+  z-index: 30;
+}
+
+.nav-menu p img {
+  width: auto;
+  height: auto;
+  padding-bottom: 25px;
+}
+
+.nav-menu ul li a {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding: 0 0 15px 8px;
+}
+
+.nav-menu ul li a:hover {
+  opacity: .7;
+}
+
+/* ハンバーガーメニュー*/
+.hamburger {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.hamburger .ham-line {
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #3e3e3e;
+  position: relative;
+  display: block;
+  transition: ease 0.3s;
+}
+
+.hamburger .ham-line:nth-child(1) {
+  top: 0;
+}
+.hamburger .ham-line:nth-child(2) {
+  margin: 5px 0;
+}
+.hamburger .ham-line:nth-child(3) {
+  top: 0px;
+}
+
+.hamburger .ham-word {
+  display: block;
+  font-size: 10px;
+  padding-top: 1px;
+  transition: ease .3s;
+}
+
+.mask {
+  position: fixed;
+  background: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none;
+  transition: ease .3s;
+}
+
+/* メニューが開いたとき */
+.active .nav-menu  {
+  display: block;
+  transform: translateX(30%);
+  transition: ease .3s;
+}
+
+.active .hamburger .ham-line:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.active .hamburger .ham-line:nth-child(2) {
+  opacity: 0;
+}
+.active .hamburger .ham-line:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.active .hamburger .ham-word {
+  opacity: 0;
+}
+
+.active .mask {
+  display: block;
+  z-index: 20;
+  transition: ease .3s;
+}
+
+/* ファーストビュー */
+.info {
+  height: auto;
+  margin-top: 70px;
+  background: #489e9c;
+}
+
+.info-img {
+  padding-top: 20px;
+  padding-left: 10px;
+} 
+
+.future {
+  width: 100%;
+  height: auto;
+  background-color: #ff914d;
+  padding-top: 20px;
+}
+
+/* 実施へのハードル */
+.worry {
+  width: 100%;
+  height: auto;
+  padding: 20px 0 5px;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+
+.worry ul {
+  margin-top: 5px;
+}
+
+.trust img {
+  width: 100%;
+  height: auto;
+  padding: 10px 0;
+  background: #fff;
+}
+
+/* サービス概要 */
+.service-desc {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  background: #489e9c;
+  padding-bottom: 10px;
+}
+
+/* 実施イメージ */
+.step {
+  width: 100%;
+  height: auto;
+  background: #489e9c;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step ul li img {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.step .triangle {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
+  border-top: 30px solid #fcfe7e;
+  border-bottom: 0;
+  margin: 0 auto 2px;
+}
+
+/* 成果実績 */
+.result {
+  background: #489e9c;
+  padding-bottom: 12px;
+}
+
+/* スライダー */
+.swiper {
+  width: 100%;
+  height: auto;
+  padding: 0 0 25px 0;
+}
+
+.swiper-pagination-bullets {
+  width: 100px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 0 0 10px;;
+  background: #fff;
+}
+
+.swiper-pagination-bullet:first-child {
+  margin: 0;
+}
+
+/* サービス特徴 */
+.service-feature {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #489e9c;
+}
+
+/* よくある質問 */
+.faq {
+  background: #489e9c;
+  padding: 0 10px 20px 10px;
+}
+
+/* アコーディオン */
+.accordion {
+  width: 100%;
+  margin-top: 5px;
+  text-align: left;
+}
+
+.question {
+  border: solid 1px #489e9c;
+  border-radius: 7px;
+  color: #3e3e3e;
+  font-size: 2rem;
+  height: auto;
+  padding: 20px 20px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: ease .3s;
+}
+
+.contents {
+  display: none;
+  border-radius: 7px;
+  background: #fff;
+  color: #e74747;
+  font-size: 1.6rem;
+  padding: 15px 20px;
+  margin-bottom: 5px;
+  line-height: normal;
+  height: auto;
+  opacity: 1;
+}
+
+.question::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: solid 2px #3e3e3e;
+  border-bottom: solid 2px #3e3e3e;
+  transform: translateY(-50%) rotate(45deg);
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border-radius: 1px;
+  transition: ease .3s;
+}
+
+.question.active::after {
+  transform: translateY(-50%) rotate(225deg);
+  transition: ease .3s;
+}
+
+/* フッター */
+.footer {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  display: block;
+  padding: 20px;
+}
+
+.footer p {
+  color: #3e3e3e;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* PCサイズ */
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 4.2rem;
+  }
+  .sub-title {
+    font-size: 2.6rem;
+    margin-bottom: 10px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-menu {
+    position: relative; 
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    transform: translateX(0%);
+    transition: ease .3s;
+  }
+
+  .nav-menu p img {
+    display: none;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-menu ul li {
+    display: block;
+    margin-left: 40px;
+    margin-bottom: 0;
+  }
+
+  .nav-menu ul li:first-child {
+    margin-left: 0;
+  }
+
+  .nav-menu ul li a {
+    padding: 0;
+    cursor: pointer;
+  }
+ 
+  .active .mask {
+    display: none;
+  }
+
+  .worry ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+  }
+
+  .service-desc {
+    padding: 0 10px 15px 10px;
+  }
+
+  .service-desc ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+   .step ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .step ul li.triangle {
+    border-right: 0;
+    border-left: 30px solid #fcfe7e;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+  }
+
+  .service-feature ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .service-feature h1 {
+    padding-bottom: 10px;
+  }
+
+  .faq h1 {
+    padding-bottom: 10px;
+  }
+}
+
+
+
